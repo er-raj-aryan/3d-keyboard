@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #1e1e1e;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.key {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(145deg, #2e2e2e, #1a1a1a);
+  box-shadow: 3px 3px 5px #0d0d0d, -3px -3px 5px #333;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transform: perspective(600px) rotateX(10deg);
+  transition: all 0.1s ease-in-out;
+}
+
+.key:hover {
+  background: #444;
+}
+
+.key:active,
+.key.pressed {
+  transform: translateY(4px) scale(0.98);
+  box-shadow: inset 2px 2px 3px #000;
+}
+
+.space {
+  width: 300px;
+}
